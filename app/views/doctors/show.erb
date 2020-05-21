@@ -1,0 +1,9 @@
+<h2>Info for <%= @doctor.name %></h2>
+
+<% @doctor.appointments.each {|appt| %>
+
+ <%= link_to appt.time, appt %> for <%= link_to appt.patient.name, appt.patient %>
+
+
+
+    <% } %>
