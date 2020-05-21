@@ -1,0 +1,7 @@
+<% @pat.appointments.each {|a| %>
+
+
+<%= a.time %>  <%= link_to a.doctor.name, a.doctor %><br>
+
+
+    <% } %>
