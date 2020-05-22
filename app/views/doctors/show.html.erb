@@ -1,0 +1,7 @@
+<h1><%= @doctor.name %></h1>
+<p><%= @doctor.department %></p>
+
+<% @doctor.appointments.each do |appointment| %>
+    <%= @doctor_patient = @doctor.patients.find(appointment.patient_id) %>
+    <div><%= link_to appointment.patient.name, patient_path(@doctor_patient) %><div>
+    <% end %>
